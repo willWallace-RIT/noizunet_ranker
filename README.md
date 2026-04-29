@@ -1,4 +1,7 @@
 # noizunet_ranker
+
+((like all iterative concepts on github, public does not mean complete))
+
 Find and rank common derez chunks for noise seed searching
 
 Here’s a clean GitHub-ready README.md for your project.
