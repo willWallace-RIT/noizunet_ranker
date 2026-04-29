@@ -25,3 +25,15 @@ def noise_variance(chunk, k=5):
         feats.append(extract_features(noisy))
 
     return np.var(feats)
+
+
+def similarity_density(chunk, all_features, threshold=0.85):
+    f = chunk["feature"]
+    sims = []
+
+    for other in all_features:
+        sim = np.dot(f, other) / (np.linalg.norm(f) * np.linalg.norm(other) + 1e-6)
+        if sim > threshold:
+            sims.append(sim)
+
+    return np.sum(sims)
